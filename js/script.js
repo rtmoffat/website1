@@ -9,7 +9,7 @@ function submit()
         'Accept-Encoding': 'gzip, deflate',
         Connection: 'keep-alive',
         'Content-Type': 'application/json',
-        'Ocp-Apim-Subscription-Key': '40f664e55b124653ab2ec9bcb621123f'
+        'Ocp-Apim-Subscription-Key': 'YOUR KEY'
         },
         body: '{"kind":"SentimentAnalysis","analysisInput":{"documents":[{"id":"documentId","text":"I bought a size S and it fit perfectly. I found the zipper a little bit difficult to get up & down due to the side rushing. The color and material are beautiful in person. Amazingly comfortable!","language":"en"}]},"parameters":{"opinionMining":false}}'
     };
