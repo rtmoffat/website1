@@ -11,10 +11,10 @@ function submit()
         'Content-Type': 'application/json',
         'Ocp-Apim-Subscription-Key': 'YOUR KEY'
         },
-        body: '{"kind":"SentimentAnalysis","analysisInput":{"documents":[{"id":"documentId","text":"I bought a size S and it fit perfectly. I found the zipper a little bit difficult to get up & down due to the side rushing. The color and material are beautiful in person. Amazingly comfortable!","language":"en"}]},"parameters":{"opinionMining":false}}'
+        body: '{review:}'
     };
     
-    fetch('https://website1ls.cognitiveservices.azure.com/language/:analyze-text?api-version=2022-05-01', options)
+    fetch('https://prod-04.eastus.logic.azure.com:443/workflows/4c1dc9a6b6744c59a313e3a85ab5af03/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=D8bYEXdBZ1zedTpSmLZ3Wmuw3bXktrnKTajAFnVQQ_4', options)
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => console.error(err));
