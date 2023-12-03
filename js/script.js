@@ -20,7 +20,7 @@ function submit()
         .then(response => response.json())
         .then((response) => {
             console.log(response)
-            document.getElementById('results').innerHTML=response
+            document.getElementById('results').innerHTML=JSON.stringify(response)
         })
         .catch(err => console.error(err));
 }
